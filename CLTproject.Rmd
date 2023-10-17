@@ -86,8 +86,6 @@ print(paste('mean = ', mean(my1000$k4),' sd = ',sd(my1000$k4)))
 
 ### In this case the stdev was cut in half because the sample size was four. This is what the central limit theorem says. There are also 5 peaks. They go from FFFF,to FFFM, to FFMM to FMMM and finally MMMM.
 
-# Now finish by adding blocks with numb being 9, then 16, 25, and 36. be sure to mention how the standard deviation progresses as the sample size changes,
-
 ```{r include=TRUE,echo=FALSE}
 numb = 9
 Hdata = Homers_data[sample(1:1000,size=numb*1000, replace=T),"kkardashtemp"]
@@ -212,3 +210,10 @@ cat("Difference in SD = ", diffSD36, "\n")
 cat("Difference in Mean = ", diffMean36, "\n")
 
 ```
+
+
+From this pattern all of the graphs are only going to have one peak,as i said the last one only had one peak, the mean is `r mean(my1000$k36)`,the sd is `r sd(my1000$k36)`.
+
+# Conclusion
+
+From the look of all the samples the mean stayed basically the same the only ones that actually changed was the sd, the bigger sample the more the sd will reduce you divide the original with the square root of the sample taking out and you will get the new sd.
